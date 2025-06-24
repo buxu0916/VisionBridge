@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VisionBridge Lite</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(to bottom, #3d3d70, #6364aa);
+      color: #1c1c1c;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 15px;
+      color: white;
+      font-weight: bold;
+      font-size: 0.9em;
+    }
+    .chat-bubble {
+      background: white;
+      margin: 20px;
+      border-radius: 20px;
+      padding: 15px;
+      font-size: 1.2em;
+      width: fit-content;
+      max-width: 80%;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      position: relative;
+    }
+    .chat-bubble::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: -10px;
+      border-width: 10px;
+      border-style: solid;
+      border-color: transparent transparent transparent white;
+      transform: translateY(-50%);
+    }
+    .battery-image {
+      display: flex;
+      justify-content: center;
+      margin: 10px;
+    }
+    .battery-image img {
+      width: 80%;
+      max-width: 300px;
+      border: 8px solid white;
+      border-radius: 8px;
+    }
+    .title-bar {
+      text-align: center;
+      background: #dedeea;
+      padding: 5px;
+      font-size: 1.2em;
+      font-weight: bold;
+    }
+    .text-box {
+      background: white;
+      margin: 20px;
+      padding: 15px;
+      border-radius: 12px;
+      font-size: 1.1em;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .volunteer-btn {
+      display: block;
+      margin: 20px auto;
+      background: #d3d9ff;
+      border: 4px solid #2e2e80;
+      border-radius: 12px;
+      padding: 15px 20px;
+      text-align: center;
+      font-weight: bold;
+      font-size: 1.2em;
+      color: #111;
+      width: 80%;
+    }
+    footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background: white;
+      border-top: 1px solid #ccc;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 10px 0;
+      font-size: 0.9em;
+    }
+    footer div {
+      text-align: center;
+    }
+    footer div svg {
+      display: block;
+      margin: 0 auto 5px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <span>07:00 AM</span>
+    <span>HELLO, USER!</span>
+  </header>
+
+  <div class="chat-bubble">
+    The battery’s size and brand.
+  </div>
+
+  <div class="battery-image">
+    <img src="https://www.cune.com.cn/uploads/allimg/190710/3-1ZG0091K90-L.jpg" alt="Battery">
+  </div>
+
+  <div class="title-bar">VisionBridge Lite</div>
+
+  <div class="text-box">
+    Text Recognize: <br>
+    This is an AA size alkaline battery of PLESTR.
+  </div>
+
+  <a class="volunteer-btn" href="#">Help from Volunteers</a>
+
+  <footer>
+    <div>
+      <a href="index.html">Main Page</a>
+    </div>
+    <div>
+      <div>🎤</div>
+      Voice
+    </div>
+    <div>
+      <div>⌨️</div>
+      Keyboard
+    </div>
+  </footer>
+</body>
+</html>
