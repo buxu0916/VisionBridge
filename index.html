@@ -11,17 +11,22 @@
       margin: 0;
       background-color: #fff;
       font-size: 2em;
-      padding-bottom: 100px;
+      padding-bottom: 120px; /* extra space for footer */
     }
     header {
       background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1506744038136-46273834b3fb');
       background-size: cover;
       color: white;
-      text-align: center;
       padding: 60px 20px 30px;
+      text-align: center;
     }
-    header h1 {
-      font-size: 2.2em;
+    .time-now {
+      text-align: right;
+      font-size: 0.8em;
+    }
+    .user-greeting {
+      text-align: left;
+      font-size: 1em;
     }
     .search-bar {
       margin: 10px auto;
@@ -67,14 +72,14 @@
       margin: 10px 0;
     }
     footer {
-      position: fixed;
+      position: sticky;
       bottom: 0;
       width: 100%;
       background-color: #333;
       display: flex;
       justify-content: space-around;
       padding: 10px 0;
-      z-index: 1000;
+      color: white;
     }
     footer a {
       color: white;
@@ -93,16 +98,23 @@
       align-items: center;
       margin-top: -20px;
     }
-    .time-now {
-      text-align: right;
-      font-size: 0.8em;
+    @media (max-width: 600px) {
+      body {
+        font-size: 1em;
+      }
+      .section h2 {
+        font-size: 1.3em;
+      }
+      .card h3 {
+        font-size: 1em;
+      }
     }
   </style>
 </head>
 <body>
   <header>
     <div class="time-now" id="currentTime"></div>
-    <div style="text-align: left; font-size: 1em;">HELLO, USER!</div>
+    <div class="user-greeting">HELLO, USER!</div>
     <div class="search-bar">
       <input type="text" placeholder="Tap twice to start searching...">
     </div>
@@ -113,11 +125,11 @@
     <h2>TODAY'S NEWS</h2>
     <div class="grid">
       <div class="card">
-        <img src="https://pic2.zhimg.com/v2-ad79da648dd4c3ed2b425369767ea92b_1440w.jpg" alt="New Tech Products">
+        <img src="https://pic2.zhimg.com/v2-ad79da648dd4c3ed2b425369767ea92b_1440w.jpg" alt="New Tech Products" loading="lazy">
         <h3>New Tech Products</h3>
       </div>
       <div class="card">
-        <img src="https://cdn-icons-png.flaticon.com/512/21/21601.png" alt="Top News">
+        <img src="https://cdn-icons-png.flaticon.com/512/21/21601.png" alt="Top News" loading="lazy">
         <h3>Top News</h3>
       </div>
     </div>
@@ -127,11 +139,11 @@
     <h2>EDUCATION</h2>
     <div class="grid">
       <div class="card">
-        <img src="https://cdn-icons-png.flaticon.com/512/3105/3105613.png" alt="Life Skills">
+        <img src="https://cdn-icons-png.flaticon.com/512/3105/3105613.png" alt="Life Skills" loading="lazy">
         <h3>LIFE SKILLS</h3>
       </div>
       <div class="card">
-        <img src="https://cdn-icons-png.flaticon.com/512/2920/2920293.png" alt="Application">
+        <img src="https://cdn-icons-png.flaticon.com/512/2920/2920293.png" alt="Application" loading="lazy">
         <h3>APPLICATION</h3>
       </div>
     </div>
