@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>VisionBridge Forum</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: #f0f2ff;
+      padding-bottom: 80px;
+    }
+
+    header {
+      background-color: #3d3d70;
+      color: white;
+      padding: 15px;
+      text-align: center;
+      font-size: 1.4em;
+      font-weight: bold;
+    }
+
+    .back-link {
+      text-align: left;
+      padding: 10px 20px;
+    }
+
+    .back-link a {
+      text-decoration: none;
+      background-color: #444;
+      color: white;
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-size: 0.9em;
+      display: inline-block;
+    }
+
+    .search-container {
+      display: flex;
+      align-items: center;
+      background-color: #fff;
+      border-radius: 25px;
+      padding: 10px 15px;
+      margin: 15px auto;
+      max-width: 90%;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .search-container input {
+      border: none;
+      outline: none;
+      flex: 1;
+      font-size: 1em;
+    }
+
+    .dropdowns {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin: 0 auto 10px;
+    }
+
+    .dropdowns select {
+      padding: 6px 12px;
+      border-radius: 12px;
+      border: 1px solid #ccc;
+      font-size: 0.9em;
+    }
+
+    .question-card {
+      background-color: white;
+      margin: 10px auto;
+      border-radius: 20px;
+      padding: 15px 20px;
+      max-width: 90%;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .question-title {
+      font-weight: bold;
+      font-size: 1.1em;
+      margin-bottom: 5px;
+      color: #2d2d5f;
+    }
+
+    .question-meta {
+      font-size: 0.8em;
+      color: gray;
+      margin-bottom: 8px;
+    }
+
+    .question-content {
+      font-size: 0.9em;
+    }
+
+    .question-content a {
+      text-decoration: none;
+      color: #4e4ebf;
+      font-weight: bold;
+    }
+
+    footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background-color: #333;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 10px 0;
+      color: white;
+    }
+
+    footer a {
+      color: white;
+      text-decoration: none;
+      font-size: 0.9em;
+    }
+
+    .mic-btn {
+      background-color: #0b0b45;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      font-size: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: -20px;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    VisionBridge Forum
+  </header>
+
+  <!-- Back to Main Page Button -->
+  <div class="back-link">
+    <a href="https://codepen.io/yzmflrry-the-scripter/pen/EajGvxb" target="_blank">← Back to Main Page</a>
+  </div>
+
+  <div class="search-container">
+    🔍 <input type="text" placeholder="Tap twice to search something...">
+  </div>
+
+  <div class="dropdowns">
+    <select>
+      <option>Arranged by</option>
+    </select>
+    <select>
+      <option>Latest</option>
+    </select>
+    <select>
+      <option>Related</option>
+    </select>
+  </div>
+
+  <!-- Question 1 -->
+  <div class="question-card">
+    <div class="question-title">Visually-Impaired-Friendly Places</div>
+    <div class="question-meta">1h ago · User BalaBala</div>
+    <div class="question-content">
+      I go to places at Kepong and Puchong last holiday and ... 
+      <a href="forum_post_1.html">See more</a>
+    </div>
+  </div>
+
+  <!-- Question 2 -->
+  <div class="question-card">
+    <div class="question-title">Recommended Products of Elight</div>
+    <div class="question-meta">1 day ago · User BOBOJI</div>
+    <div class="question-content">
+      I’ve tried a few products of ELIGHT and they are soooo goooood... 
+      <a href="forum_post_2.html">See more</a>
+    </div>
+  </div>
+
+  <!-- Question 3 -->
+  <div class="question-card">
+    <div class="question-title">How Can I Get Bantuan OKU?</div>
+    <div class="question-meta">2m ago · User Nasi_Kandar</div>
+    <div class="question-content">
+      Photostat your IC and bring along the OKU cert with you...
+      <a href="forum_post_3.html">See more</a>
+    </div>
+  </div>
+
+  <!-- Question 4 -->
+  <div class="question-card">
+    <div class="question-title">Any useful courses?</div>
+    <div class="question-meta">20h ago · User Ali Muhammad</div>
+    <div class="question-content">
+      VisionBridge can provide courses according to your abilities... 
+      <a href="forum_post_4.html">See more</a>
+    </div>
+  </div>
+
+  <!-- Question 5 -->
+  <div class="question-card">
+    <div class="question-title">Applying A Guide Dog</div>
+    <div class="question-meta">2 days ago · User Qi</div>
+    <div class="question-content">
+      Useful advice, I have a guide dog for myself now... 
+      <a href="forum_post_5.html">See more</a>
+    </div>
+  </div>
+
+  <!-- Question 6 -->
+  <div class="question-card">
+    <div class="question-title">How to learn Braille?</div>
+    <div class="question-meta">6 days ago · User Joannnne</div>
+    <div class="question-content">
+      My parents found a class, the teachers are qualified... 
+      <a href="forum_post_6.html">See more</a>
+    </div>
+  </div>
+
+  <!-- Question 7 -->
+  <div class="question-card">
+    <div class="question-title">Official: VisionBridge Tips!!!</div>
+    <div class="question-meta">6m ago · ELIGHT</div>
+    <div class="question-content">
+      User KAHAHAH: Useful advice thx for sharingggg abt... 
+      <a href="forum_post_7.html">See more</a>
+    </div>
+  </div>
+
+  <footer>
+    <a href="index.html">Main Page</a>
+    <a href="#">Marketplace</a>
+    <div class="mic-btn">🎤</div>
+    <a href="visionbridge_forum.html">Forum</a>
+    <a href="#">Settings</a>
+  </footer>
+
+</body>
+</html>
