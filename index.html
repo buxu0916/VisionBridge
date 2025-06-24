@@ -10,6 +10,8 @@
       font-family: 'Roboto', sans-serif;
       margin: 0;
       background-color: #fff;
+      font-size: 2em;
+      padding-bottom: 100px;
     }
     header {
       background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1506744038136-46273834b3fb');
@@ -19,7 +21,7 @@
       padding: 60px 20px 30px;
     }
     header h1 {
-      font-size: 1.8em;
+      font-size: 2.2em;
     }
     .search-bar {
       margin: 10px auto;
@@ -33,18 +35,19 @@
       border-radius: 25px;
       border: none;
       outline: none;
+      font-size: 1em;
     }
     .section {
       padding: 20px;
     }
     .section h2 {
       color: #3c3c3c;
-      font-size: 1.4em;
+      font-size: 1.6em;
       margin-bottom: 15px;
     }
     .grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
       gap: 15px;
     }
     .card {
@@ -55,11 +58,12 @@
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
     .card img {
-      max-width: 60%;
+      max-width: 100%;
+      height: auto;
       margin-bottom: 10px;
     }
     .card h3 {
-      font-size: 1.1em;
+      font-size: 1.2em;
       margin: 10px 0;
     }
     footer {
@@ -70,6 +74,7 @@
       display: flex;
       justify-content: space-around;
       padding: 10px 0;
+      z-index: 1000;
     }
     footer a {
       color: white;
@@ -88,11 +93,15 @@
       align-items: center;
       margin-top: -20px;
     }
+    .time-now {
+      text-align: right;
+      font-size: 0.8em;
+    }
   </style>
 </head>
 <body>
   <header>
-    <div style="text-align: right; font-size: 0.8em;">07:00 AM</div>
+    <div class="time-now" id="currentTime"></div>
     <div style="text-align: left; font-size: 1em;">HELLO, USER!</div>
     <div class="search-bar">
       <input type="text" placeholder="Tap twice to start searching...">
@@ -104,7 +113,7 @@
     <h2>TODAY'S NEWS</h2>
     <div class="grid">
       <div class="card">
-        <img src="https://cdn-icons-png.flaticon.com/512/684/684908.png" alt="New Tech Products">
+        <img src="https://pic2.zhimg.com/v2-ad79da648dd4c3ed2b425369767ea92b_1440w.jpg" alt="New Tech Products">
         <h3>New Tech Products</h3>
       </div>
       <div class="card">
@@ -135,5 +144,15 @@
     <a href="forum.html">Forum</a>
     <a href="#">Settings</a>
   </footer>
+
+  <script>
+    function updateTime() {
+      const options = { timeZone: 'Asia/Kuala_Lumpur', hour: '2-digit', minute: '2-digit', hour12: true };
+      const time = new Intl.DateTimeFormat('en-MY', options).format(new Date());
+      document.getElementById('currentTime').textContent = time;
+    }
+    updateTime();
+    setInterval(updateTime, 60000);
+  </script>
 </body>
 </html>
