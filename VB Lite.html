@@ -11,7 +11,7 @@
       font-family: 'Roboto', sans-serif;
       background: linear-gradient(to bottom, #3d3d70, #6364aa);
       color: #1c1c1c;
-      padding-bottom: 80px; /* ensure footer doesn't block content */
+      padding-bottom: 80px;
     }
     header {
       display: flex;
@@ -21,6 +21,9 @@
       color: white;
       font-weight: bold;
       font-size: 0.9em;
+    }
+    .header-title {
+      font-size: 1.2em;
     }
     .time-now {
       text-align: right;
@@ -58,13 +61,6 @@
       border: 8px solid white;
       border-radius: 8px;
     }
-    .title-bar {
-      text-align: center;
-      background: #dedeea;
-      padding: 5px;
-      font-size: 1.2em;
-      font-weight: bold;
-    }
     .text-box {
       background: white;
       margin: 20px;
@@ -72,6 +68,8 @@
       border-radius: 12px;
       font-size: 1.1em;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      opacity: 0.7;
+      text-align: right;
     }
     .volunteer-btn, .nav-btn {
       display: block;
@@ -113,7 +111,7 @@
 </head>
 <body>
   <header>
-    <div></div>
+    <div class="header-title">VisionBridge Lite</div>
     <div class="time-now" id="currentTime"></div>
   </header>
 
@@ -124,8 +122,6 @@
   <div class="battery-image">
     <img src="https://www.cune.com.cn/uploads/allimg/190710/3-1ZG0091K90-L.jpg" alt="Battery">
   </div>
-
-  <div class="title-bar">VisionBridge Lite</div>
 
   <div class="text-box">
     Text Recognize: <br>
@@ -163,6 +159,5 @@
     updateTime();
     setInterval(updateTime, 60000);
   </script>
-
 </body>
 </html>
