@@ -11,6 +11,7 @@
       font-family: 'Roboto', sans-serif;
       background: linear-gradient(to bottom, #3d3d70, #6364aa);
       color: #1c1c1c;
+      padding-bottom: 80px; /* ensure footer doesn't block content */
     }
     header {
       display: flex;
@@ -19,6 +20,10 @@
       padding: 10px 15px;
       color: white;
       font-weight: bold;
+      font-size: 0.9em;
+    }
+    .time-now {
+      text-align: right;
       font-size: 0.9em;
     }
     .chat-bubble {
@@ -68,7 +73,7 @@
       font-size: 1.1em;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
-    .volunteer-btn {
+    .volunteer-btn, .nav-btn {
       display: block;
       margin: 20px auto;
       background: #d3d9ff;
@@ -80,6 +85,7 @@
       font-size: 1.2em;
       color: #111;
       width: 80%;
+      text-decoration: none;
     }
     footer {
       position: fixed;
@@ -93,28 +99,22 @@
       color: black;
       z-index: 100;
     }
-
     footer a {
       color: black;
       text-decoration: none;
       font-size: 1.0em;
     }
-
     footer div {
       text-align: center;
       color: black;
       font-size: 0.9em;
     }
-    footer div svg {
-      display: block;
-      margin: 0 auto 5px;
-    }
   </style>
 </head>
 <body>
   <header>
-    <span>07:00 AM</span>
-    <span>HELLO, USER!</span>
+    <div></div>
+    <div class="time-now" id="currentTime"></div>
   </header>
 
   <div class="chat-bubble">
@@ -134,18 +134,35 @@
 
   <a class="volunteer-btn" href="#">Help from Volunteers</a>
 
+  <div class="chat-bubble">
+    I need to go to Restaurant Best.
+  </div>
+
+  <a class="nav-btn" href="AI Nav.html">AI Navigation</a>
+
   <footer>
     <div>
       <a href="index.html">Main Page</a>
     </div>
     <div>
       <div>🎤</div>
-      <a>Voice</a>
+      <a href="#">Voice</a>
     </div>
     <div>
       <div>⌨️</div>
-      <a>Keyboard</a>
+      <a href="#">Keyboard</a>
     </div>
   </footer>
+
+  <script>
+    function updateTime() {
+      const options = { timeZone: 'Asia/Kuala_Lumpur', hour: '2-digit', minute: '2-digit', hour12: true };
+      const time = new Intl.DateTimeFormat('en-MY', options).format(new Date());
+      document.getElementById('currentTime').textContent = time;
+    }
+    updateTime();
+    setInterval(updateTime, 60000);
+  </script>
+
 </body>
 </html>
