@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Connecting with Volunteers</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f0f4ff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    .loader {
+      border: 8px solid #e0e0e0;
+      border-top: 8px solid #4a6cff;
+      border-radius: 50%;
+      width: 80px;
+      height: 80px;
+      animation: spin 1.2s linear infinite;
+      margin-bottom: 20px;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    h1 {
+      font-size: 1.5em;
+      color: #333;
+    }
+
+    .status-message {
+      color: #666;
+      margin-top: 10px;
+    }
+
+    .button-container {
+      margin-top: 30px;
+    }
+
+    .cancel-button {
+      background-color: #ccc;
+      color: #000;
+      border: none;
+      padding: 12px 24px;
+      font-size: 1em;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .cancel-button:hover {
+      background-color: #bbb;
+    }
+  </style>
+</head>
+<body>
+  <div class="loader"></div>
+  <h1>Connecting with Volunteers...</h1>
+  <div class="status-message">Please wait while we connect you with an available volunteer.</div>
+
+  <div class="button-container">
+    <button class="cancel-button" onclick="window.location.href='index.html'">Back to Main Page</button>
+  </div>
+</body>
+</html>
