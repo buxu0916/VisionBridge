@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Forum Post 2 - VisionBridge</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: #f4f6ff;
+      color: #333;
+      padding-bottom: 80px;
+    }
+
+    header {
+      background-color: #3d3d70;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 1.6em;
+      font-weight: bold;
+    }
+
+    .back-link {
+      margin: 15px;
+    }
+
+    .back-link a {
+      text-decoration: none;
+      background-color: #444;
+      color: white;
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-size: 0.9em;
+    }
+
+    .post-container {
+      max-width: 90%;
+      margin: 20px auto;
+      background: white;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .post-title {
+      font-size: 1.4em;
+      font-weight: bold;
+      color: #2d2d5f;
+      margin-bottom: 10px;
+    }
+
+    .post-meta {
+      font-size: 0.9em;
+      color: gray;
+      margin-bottom: 20px;
+    }
+
+    .post-body {
+      font-size: 1.05em;
+      line-height: 1.6;
+    }
+
+    footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background-color: #333;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 10px 0;
+      color: white;
+    }
+
+    footer a {
+      color: white;
+      text-decoration: none;
+      font-size: 0.9em;
+    }
+
+    .mic-btn {
+      background-color: #0b0b45;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      font-size: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: -20px;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <header>Recommended Products of Elight</header>
+
+  <div class="back-link">
+    <a href="visionbridge_forum.html">← Back to Forum</a>
+  </div>
+
+  <div class="post-container">
+    <div class="post-title">Recommended Products</div>
+    <div class="post-meta">Posted by BOBOJI · 1 day ago</div>
+    <div class="post-body">
+      <p>I’ve tried a few products and they are absolutely incredible. The tactile wristwatch is a game-changer — it allows me to check the time just by feeling the pins that represent the hour and minute. It’s durable and stylish too!</p>
+      <p>Another product I love is their voice-activated smart cane. It connects to my phone and provides navigation alerts. Very helpful for crowded streets.</p>
+      <p>Has anyone else used their AI-reading glasses? I heard they can read signs and documents out loud. Thinking of buying one soon.</p>
+    </div>
+  </div>
+
+  <footer>
+    <a href="index.html">Main Page</a>
+    <a href="#">Marketplace</a>
+    <div class="mic-btn">🎤</div>
+    <a href="visionbridge_forum.html">Forum</a>
+    <a href="#">Settings</a>
+  </footer>
+
+</body>
+</html>
