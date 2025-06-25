@@ -19,6 +19,11 @@
       font-size: 0.9em;
     }
 
+    .time-now {
+      text-align: right;
+      font-size: 0.8em;
+    }
+
     .search-bar {
       display: flex;
       align-items: center;
@@ -39,7 +44,6 @@
     .map {
       width: 100%;
       height: 250px;
-      margin: 10px 0;
     }
 
     .filter-row {
@@ -122,7 +126,7 @@
 </head>
 <body>
   <header>
-    07:00 AM
+    <div class="time-now" id="currentTime"></div>
   </header>
 
   <div class="search-bar">
@@ -130,12 +134,12 @@
   </div>
 
   <div class="map">
-    <img src="images/screenshot-040829.png" alt="Map Screenshot" style="width: 100%; height: 100%; object-fit: cover; border-radius: 0;" />
+    <img src="Screenshot 2025-06-25 040829.png" alt="Map Screenshot" style="width: 100%; height: 100%; object-fit: cover; border-radius: 0;" />
   </div>
 
   <div class="filter-row">
     <select><option>By Pace</option></select>
-    <select><option>By Car</option></select>
+    <select><option>By Mrt</option></select>
     <select><option>By Bus</option></select>
   </div>
 
@@ -186,5 +190,16 @@
     <a href="VB Lite.html" class="mic-btn">🎤</a>
     <a href="forum.html">Forum</a>
   </footer>
+
+  <script>
+    function updateTime() {
+      const options = { timeZone: 'Asia/Kuala_Lumpur', hour: '2-digit', minute: '2-digit', hour12: true };
+      const time = new Intl.DateTimeFormat('en-MY', options).format(new Date());
+      document.getElementById('currentTime').textContent = time;
+    }
+    updateTime();
+    setInterval(updateTime, 60000);
+  </script>
+  
 </body>
 </html>
