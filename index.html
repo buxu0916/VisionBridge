@@ -23,25 +23,26 @@
       position: relative;
     }
 
-    .time-now {
-      text-align: right;
+    .settings-icon {
+      font-size: 2em;
+      text-decoration: none;
+      color: white;
+      position: absolute;
+      top: 15px;
+      right: 20px;
+    }
+
+    .info-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 40px;
       font-size: 0.8em;
-      margin-bottom: 5px;
+      padding: 0 10px;
     }
 
     .user-greeting {
-      text-align: left;
       font-size: 1em;
-      margin-bottom: 15px;
-    }
-
-    .settings-icon {
-      position: absolute;
-      top: 10px;
-      right: 15px;
-      font-size: 1.2em;
-      text-decoration: none;
-      color: white;
     }
 
     .search-bar {
@@ -85,17 +86,15 @@
     }
 
     .card img {
-      max-width: 100%;
-      height: auto;
+      width: 120px;
+      height: 120px;
+      object-fit: contain;
       margin-bottom: 10px;
     }
 
     .card h3 {
       font-size: 1.2em;
-      margin: 10px 0 0;
-      height: 1.5em;
-      line-height: 1.5em;
-      overflow: hidden;
+      margin: 10px 0;
     }
 
     footer {
@@ -119,8 +118,15 @@
     }
 
     .mic-btn {
-      font-size: 2em;
-      margin-top: -10px;
+      background: #4e4ebf;
+      color: white;
+      font-size: 2.4em;
+      border-radius: 50%;
+      width: 80px;
+      height: 80px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
     @media (max-width: 600px) {
@@ -139,8 +145,10 @@
 <body>
   <header>
     <a href="settings.html" class="settings-icon">⚙️</a>
-    <div class="time-now" id="currentTime"></div>
-    <div class="user-greeting">HELLO, USER!</div>
+    <div class="info-bar">
+      <div class="user-greeting">HELLO, USER!</div>
+      <div class="time-now" id="currentTime"></div>
+    </div>
     <div class="search-bar">
       <input type="text" placeholder="Tap twice to start searching..." />
     </div>
@@ -192,4 +200,3 @@
   </script>
 </body>
 </html>
-
