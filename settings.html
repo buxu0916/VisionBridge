@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VisionBridge Settings</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: #f4f6fa;
+      color: #333;
+      padding-bottom: 80px;
+    }
+
+    header {
+      background-color: #3d3d70;
+      color: white;
+      padding: 15px;
+      text-align: center;
+      font-size: 1.4em;
+      font-weight: bold;
+    }
+
+    .container {
+      padding: 20px;
+      max-width: 600px;
+      margin: auto;
+    }
+
+    .section {
+      background: white;
+      border-radius: 15px;
+      padding: 15px 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .section h3 {
+      margin-top: 0;
+      font-size: 1.2em;
+    }
+
+    .setting-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 10px 0;
+    }
+
+    .setting-row label {
+      flex: 1;
+    }
+
+    input[type="range"] {
+      width: 100%;
+    }
+
+    .user-info {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      font-size: 0.95em;
+    }
+
+    footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background-color: #333;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 10px 0;
+      color: white;
+    }
+
+    footer a {
+      color: white;
+      text-decoration: none;
+      font-size: 0.9em;
+    }
+
+    .mic-btn {
+      background-color: #0b0b45;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      font-size: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: -20px;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <header>Settings</header>
+
+  <div class="container">
+
+    <div class="section user-info">
+      <h3>User Information</h3>
+      <div><strong>Name:</strong> John Doe</div>
+      <div><strong>Email:</strong> johndoe@example.com</div>
+      <div><strong>Account Type:</strong> Premium</div>
+    </div>
+
+    <div class="section">
+      <h3>Audio Settings</h3>
+      <div class="setting-row">
+        <label for="volume">Volume:</label>
+        <input type="range" id="volume" name="volume" min="0" max="100" value="50">
+      </div>
+    </div>
+
+    <div class="section">
+      <h3>Preferences</h3>
+      <div class="setting-row">
+        <label for="darkmode">Dark Mode</label>
+        <input type="checkbox" id="darkmode">
+      </div>
+      <div class="setting-row">
+        <label for="notifications">Notifications</label>
+        <input type="checkbox" id="notifications" checked>
+      </div>
+      <div class="setting-row">
+        <label for="screenreader">Screen Reader</label>
+        <input type="checkbox" id="screenreader">
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <a href="index.html">Main Page</a>
+    <a href="#">Marketplace</a>
+    <div class="mic-btn" onclick="location.href='VB Lite.html'">🎤</div>
+    <a href="forum.html">Forum</a>
+    <a href="#">Settings</a>
+  </footer>
+
+</body>
+</html>
